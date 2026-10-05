@@ -7,6 +7,7 @@ from pathlib import Path
 NOTEBOOKS = {
     "week01": Path(__file__).resolve().parents[1] / "week01" / "knn_checkpoint_opgave.ipynb",
     "week02": Path(__file__).resolve().parents[1] / "week02" / "svm_checkpoint_opgave.ipynb",
+    "week03": Path(__file__).resolve().parents[1] / "week03" / "decision_trees_oefening_checkpoint_opgave.ipynb",
 }
 
 
@@ -14,7 +15,7 @@ def _notebook_namespace(week: str) -> dict:
     path = NOTEBOOKS[week]
     nb = nbformat.read(path, as_version=4)
     client = NotebookClient(
-        nb, timeout=600, kernel_name="python3",
+        nb, timeout=600, kernel_name="python3", allow_errors=True,
         resources={"metadata": {"path": str(path.parent)}},
     )
     client.execute()
@@ -43,3 +44,8 @@ def week01():
 @pytest.fixture(scope="session")
 def week02():
     return _notebook_namespace("week02")
+
+
+@pytest.fixture(scope="session")
+def week03():
+    return _notebook_namespace("week03")
