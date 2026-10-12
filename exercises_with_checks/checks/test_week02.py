@@ -40,7 +40,7 @@ def test_oef2_y_pred_digits(week02):
 def test_oef2_theorie_kernel(week02):
     antw = week02.get("antwoord_kernel")
     assert antw is not None, "variabele 'antwoord_kernel' ontbreekt"
-    assert str(antw).strip().upper() == "C", "Fout: kijk naar de resultaten van de verschillende kernels"
+    assert str(antw).strip().upper() == "A", ""
 
 
 # ---------- Oefening 3: Wine ----------
