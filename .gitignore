@@ -219,3 +219,6 @@ __marimo__/
 
 ## hidden files
 *hidden*
+
+# .csv bestanden / datasets 
+*.csv
