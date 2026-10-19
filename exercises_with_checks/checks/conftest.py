@@ -10,6 +10,7 @@ NOTEBOOKS = {
     "week03": Path(__file__).resolve().parents[1] / "week03" / "decision_trees_oefening_checkpoint_opgave.ipynb",
     "week04": Path(__file__).resolve().parents[1] / "week04" / "arima_checkpoint_opgave.ipynb",
     "week05": Path(__file__).resolve().parents[1] / "week05" / "herhaling_classification_checkpoint_opgave.ipynb",
+    "week06": Path(__file__).resolve().parents[1] / "week06" / "kmeans_dbscan_checkpoint_opgave.ipynb",
 }
 
 
@@ -59,3 +60,8 @@ def week02():
 @pytest.fixture(scope="session")
 def week05():
     return _notebook_namespace("week05")
+
+
+@pytest.fixture(scope="session")
+def week06():
+    return _notebook_namespace("week06")
