@@ -26,6 +26,8 @@ jobs:
             tests: test_week05.py
           - week: week06
             tests: test_week06.py
+          - week: week07
+            tests: test_week07.py
 
     steps:
       - uses: actions/checkout@v4
